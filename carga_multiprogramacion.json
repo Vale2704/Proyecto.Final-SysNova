@@ -1,0 +1,9 @@
+{
+  "procesos": [
+    {"nombre": "Editor", "prioridad": 3, "llegada": 0, "rafaga": 6, "paginas": 4, "es": 2, "recursos": [1, 0, 0]},
+    {"nombre": "Compilador", "prioridad": 5, "llegada": 1, "rafaga": 4, "paginas": 5, "es": 1, "recursos": [0, 1, 0]},
+    {"nombre": "Navegador", "prioridad": 2, "llegada": 3, "rafaga": 7, "paginas": 4, "es": 0, "recursos": [0, 0, 1]},
+    {"nombre": "Antivirus", "prioridad": 4, "llegada": 4, "rafaga": 3, "paginas": 3, "es": 2, "recursos": [1, 0, 0]},
+    {"nombre": "Descarga", "prioridad": 1, "llegada": 5, "rafaga": 5, "paginas": 4, "es": 3, "recursos": [0, 1, 1]}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "procesos": [
+    {"nombre": "P1", "prioridad": 2, "llegada": 0, "rafaga": 8, "paginas": 2, "es": 0, "recursos": [0, 0, 0]},
+    {"nombre": "P2", "prioridad": 3, "llegada": 1, "rafaga": 4, "paginas": 2, "es": 0, "recursos": [0, 0, 0]},
+    {"nombre": "P3", "prioridad": 1, "llegada": 2, "rafaga": 9, "paginas": 2, "es": 0, "recursos": [0, 0, 0]},
+    {"nombre": "P4", "prioridad": 4, "llegada": 3, "rafaga": 5, "paginas": 2, "es": 0, "recursos": [0, 0, 0]}
+  ]
+}

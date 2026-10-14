@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Abrir sistema de procesos",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-WindowStyle",
+        "Hidden",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        "$root=(Get-Location).Path; if (-not (Get-Command javac -EA SilentlyContinue)) { $hallado=Get-ChildItem -Path 'C:\\Program Files\\Java','C:\\Program Files\\Eclipse Adoptium','C:\\Program Files\\Microsoft','C:\\Program Files\\Amazon Corretto' -Filter javac.exe -Recurse -EA SilentlyContinue | Select-Object -First 1; if ($hallado) { $env:Path = $hallado.DirectoryName + ';' + $env:Path } }; $bin=Join-Path $root 'bin'; New-Item -ItemType Directory -Force -Path $bin | Out-Null; $srcs=@(Get-ChildItem -LiteralPath $root -Filter *.java | ForEach-Object { $_.FullName }); javac -encoding UTF-8 -d $bin @srcs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; $item=Get-Item -LiteralPath $bin -Force; $item.Attributes=$item.Attributes -bor [IO.FileAttributes]::Hidden; Start-Process javaw -WorkingDirectory $root -ArgumentList '-cp',$bin,'Main'"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "never",
+        "close": true,
+        "echo": false,
+        "focus": false,
+        "showReuseMessage": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

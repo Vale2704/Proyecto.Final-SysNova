@@ -1,0 +1,6 @@
+nombre,prioridad,llegada,rafaga,paginas,es,r1,r2,r3
+Editor,3,0,6,4,2,1,0,0
+Compilador,5,1,4,5,1,0,1,0
+Navegador,2,3,7,4,0,0,0,1
+Antivirus,4,4,3,3,2,1,0,0
+Descarga,1,5,5,4,3,0,1,1

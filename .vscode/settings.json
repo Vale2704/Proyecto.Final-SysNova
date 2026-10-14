@@ -1,0 +1,11 @@
+{
+  "task.allowAutomaticTasks": "on",
+  "files.exclude": {
+    "**/*.class": true,
+    "**/*.txt": true,
+    "**/bin": true
+  },
+  "java.project.sourcePaths": ["."],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": []
+}
